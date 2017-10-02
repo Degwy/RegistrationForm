@@ -1,3 +1,4 @@
+// Just to help me write little Selenium code
 package testUtilities;
 
 import java.util.concurrent.TimeUnit;
@@ -51,8 +52,7 @@ public class Selenium_Helper
 		default_wait();
 		driver.findElement(By.linkText(element)).click();
 	}
-	
-	
+		
 	public String get_text_of_xpath_element(String element)
 	{
 		default_wait();

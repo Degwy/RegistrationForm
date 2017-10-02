@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: step_definition.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 78, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 176.287 sec <<< FAILURE! - in step_definition.TestRunner
+Then I should see the message 'Password must be at least 6 chars'(| CucumberUser | cucumberuseremail@gmail.com | 123 | 123 | Password must be at least 6 chars |)  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError
+
+| CucumberUser | cucumberuseremail@gmail.com | 123 | 123 | Password must be at least 6 chars |  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.AssertionError
+

@@ -1,16 +1,153 @@
 [
   {
+    "source": "^(?:|I) should see the user \u0027(.*?)\u0027 is exist$",
+    "steps": [
+      {
+        "name": "I should see the user \u0027CucumberUser\u0027 is exist",
+        "aggregatedDurations": {
+          "average": 0.094782267,
+          "median": 0.094782267
+        },
+        "durations": [
+          {
+            "duration": 0.094782267,
+            "location": "new_user_can_be_created.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) want to enter name as \u0027([^\"]*)\u0027$",
+    "steps": [
+      {
+        "name": "I want to enter name as \u0027CucumberUser\u0027",
+        "aggregatedDurations": {
+          "average": 0.181521878,
+          "median": 0.181775248
+        },
+        "durations": [
+          {
+            "duration": 0.180835112,
+            "location": "new_user_can_be_created.feature:16"
+          },
+          {
+            "duration": 0.172855444,
+            "location": "new_user_can_be_created.feature:16"
+          },
+          {
+            "duration": 0.185532846,
+            "location": "new_user_can_be_created.feature:16"
+          },
+          {
+            "duration": 0.171889127,
+            "location": "new_user_can_be_created.feature:16"
+          },
+          {
+            "duration": 0.195667974,
+            "location": "new_user_can_be_created.feature:16"
+          },
+          {
+            "duration": 0.182097398,
+            "location": "new_user_can_be_created.feature:16"
+          },
+          {
+            "duration": 0.181775248,
+            "location": "new_user_can_be_created.feature:16"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter name as \u0027\u0027",
+        "aggregatedDurations": {
+          "average": 0.116318016,
+          "median": 0.116318016
+        },
+        "durations": [
+          {
+            "duration": 0.116318016,
+            "location": "new_user_can_be_created.feature:16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) want to enter password as \u0027([^\"]*)\u0027$",
+    "steps": [
+      {
+        "name": "I want to enter password as \u0027123\u0027",
+        "aggregatedDurations": {
+          "average": 0.128278237,
+          "median": 0.128278237
+        },
+        "durations": [
+          {
+            "duration": 0.128278237,
+            "location": "new_user_can_be_created.feature:18"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter password as \u0027123456\u0027",
+        "aggregatedDurations": {
+          "average": 0.148395532,
+          "median": 0.146014596
+        },
+        "durations": [
+          {
+            "duration": 0.146952288,
+            "location": "new_user_can_be_created.feature:18"
+          },
+          {
+            "duration": 0.143464085,
+            "location": "new_user_can_be_created.feature:18"
+          },
+          {
+            "duration": 0.153109458,
+            "location": "new_user_can_be_created.feature:18"
+          },
+          {
+            "duration": 0.165210983,
+            "location": "new_user_can_be_created.feature:18"
+          },
+          {
+            "duration": 0.145076905,
+            "location": "new_user_can_be_created.feature:18"
+          },
+          {
+            "duration": 0.136559475,
+            "location": "new_user_can_be_created.feature:18"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter password as \u0027\u0027",
+        "aggregatedDurations": {
+          "average": 0.135924461,
+          "median": 0.135924461
+        },
+        "durations": [
+          {
+            "duration": 0.135924461,
+            "location": "new_user_can_be_created.feature:18"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "source": "^(?:|I) create an account using the following details:",
     "steps": [
       {
         "name": "I create an account using the following details:",
         "aggregatedDurations": {
-          "average": 1.413249036,
-          "median": 1.413249036
+          "average": 1.306087581,
+          "median": 1.306087581
         },
         "durations": [
           {
-            "duration": 1.413249036,
+            "duration": 1.306087581,
             "location": "new_user_can_be_created.feature:8"
           }
         ]
@@ -23,13 +160,228 @@
       {
         "name": "I want to \u0027delete\u0027 all users",
         "aggregatedDurations": {
-          "average": 0.686178335,
-          "median": 0.686178335
+          "average": 0.62225341,
+          "median": 0.430941
         },
         "durations": [
           {
-            "duration": 0.686178335,
+            "duration": 1.939706957,
             "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.713081994,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.673651724,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.723210381,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.430941,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.394432433,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.292281521,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.211480374,
+            "location": "new_user_can_be_created.feature:5"
+          },
+          {
+            "duration": 0.221494306,
+            "location": "new_user_can_be_created.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) want to enter confirmation password as \u0027([^\"]*)\u0027$",
+    "steps": [
+      {
+        "name": "I want to enter confirmation password as \u0027123\u0027",
+        "aggregatedDurations": {
+          "average": 0.124215668,
+          "median": 0.124215668
+        },
+        "durations": [
+          {
+            "duration": 0.124215668,
+            "location": "new_user_can_be_created.feature:19"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter confirmation password as \u0027123456\u0027",
+        "aggregatedDurations": {
+          "average": 0.141270761,
+          "median": 0.140962892
+        },
+        "durations": [
+          {
+            "duration": 0.140962892,
+            "location": "new_user_can_be_created.feature:19"
+          },
+          {
+            "duration": 0.150128019,
+            "location": "new_user_can_be_created.feature:19"
+          },
+          {
+            "duration": 0.145296803,
+            "location": "new_user_can_be_created.feature:19"
+          },
+          {
+            "duration": 0.130077022,
+            "location": "new_user_can_be_created.feature:19"
+          },
+          {
+            "duration": 0.139889071,
+            "location": "new_user_can_be_created.feature:19"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter confirmation password as \u0027\u0027",
+        "aggregatedDurations": {
+          "average": 0.128621698,
+          "median": 0.128621698
+        },
+        "durations": [
+          {
+            "duration": 0.128621698,
+            "location": "new_user_can_be_created.feature:19"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter confirmation password as \u0027654321\u0027",
+        "aggregatedDurations": {
+          "average": 0.153866674,
+          "median": 0.153866674
+        },
+        "durations": [
+          {
+            "duration": 0.153866674,
+            "location": "new_user_can_be_created.feature:19"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) should see the message \u0027([^\"]*)\u0027$",
+    "steps": [
+      {
+        "name": "I should see the message \u0027Required\u0027",
+        "aggregatedDurations": {
+          "average": 0.074202849,
+          "median": 0.075226038
+        },
+        "durations": [
+          {
+            "duration": 0.075226038,
+            "location": "new_user_can_be_created.feature:21"
+          },
+          {
+            "duration": 0.068164436,
+            "location": "new_user_can_be_created.feature:21"
+          },
+          {
+            "duration": 0.079218073,
+            "location": "new_user_can_be_created.feature:21"
+          }
+        ]
+      },
+      {
+        "name": "I should see the message \u0027passwords are not the same\u0027",
+        "aggregatedDurations": {
+          "average": 0.075630808,
+          "median": 0.075630808
+        },
+        "durations": [
+          {
+            "duration": 0.072537904,
+            "location": "new_user_can_be_created.feature:21"
+          },
+          {
+            "duration": 0.078723713,
+            "location": "new_user_can_be_created.feature:21"
+          }
+        ]
+      },
+      {
+        "name": "I should see the message \u0027Invalid email address\u0027",
+        "aggregatedDurations": {
+          "average": 0.311288221,
+          "median": 0.311288221
+        },
+        "durations": [
+          {
+            "duration": 0.127684992,
+            "location": "new_user_can_be_created.feature:21"
+          },
+          {
+            "duration": 0.494891451,
+            "location": "new_user_can_be_created.feature:21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) click on submit button$",
+    "steps": [
+      {
+        "name": "I click on submit button",
+        "aggregatedDurations": {
+          "average": 2.058463145,
+          "median": 1.428965649
+        },
+        "durations": [
+          {
+            "duration": 6.366928267,
+            "location": "new_user_can_be_created.feature:10"
+          },
+          {
+            "duration": 1.428965649,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 2.223085134,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 2.567339457,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 1.290630271,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 2.606373999,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 0.976140775,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 0.9143926,
+            "location": "new_user_can_be_created.feature:20"
+          },
+          {
+            "duration": 0.152312154,
+            "location": "new_user_can_be_created.feature:20"
           }
         ]
       }
@@ -41,13 +393,118 @@
       {
         "name": "I open \u0027http://85.93.17.135:9000/\u0027",
         "aggregatedDurations": {
-          "average": 1.372237859,
-          "median": 1.372237859
+          "average": 10.368678293,
+          "median": 9.794819411
         },
         "durations": [
           {
-            "duration": 1.372237859,
+            "duration": 13.387985448,
             "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 2.969235119,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 3.070904599,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 6.77794329,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 9.794819411,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 3.397586026,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 11.149402574,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 16.788325219,
+            "location": "new_user_can_be_created.feature:4"
+          },
+          {
+            "duration": 25.981902953,
+            "location": "new_user_can_be_created.feature:4"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) want to enter email as \u0027([^\"]*)\u0027$",
+    "steps": [
+      {
+        "name": "I want to enter email as \u0027cucumberuseremail@gmail.com\u0027",
+        "aggregatedDurations": {
+          "average": 0.298675492,
+          "median": 0.29248493
+        },
+        "durations": [
+          {
+            "duration": 0.28788876,
+            "location": "new_user_can_be_created.feature:17"
+          },
+          {
+            "duration": 0.27839997,
+            "location": "new_user_can_be_created.feature:17"
+          },
+          {
+            "duration": 0.302911806,
+            "location": "new_user_can_be_created.feature:17"
+          },
+          {
+            "duration": 0.331691998,
+            "location": "new_user_can_be_created.feature:17"
+          },
+          {
+            "duration": 0.29248493,
+            "location": "new_user_can_be_created.feature:17"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter email as \u0027\u0027",
+        "aggregatedDurations": {
+          "average": 0.12056901,
+          "median": 0.12056901
+        },
+        "durations": [
+          {
+            "duration": 0.12056901,
+            "location": "new_user_can_be_created.feature:17"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter email as \u0027cucumberuseremail@gmail\u0027",
+        "aggregatedDurations": {
+          "average": 0.210317527,
+          "median": 0.210317527
+        },
+        "durations": [
+          {
+            "duration": 0.210317527,
+            "location": "new_user_can_be_created.feature:17"
+          }
+        ]
+      },
+      {
+        "name": "I want to enter email as \u0027cucumberuseremail\u0027",
+        "aggregatedDurations": {
+          "average": 0.190241045,
+          "median": 0.190241045
+        },
+        "durations": [
+          {
+            "duration": 0.190241045,
+            "location": "new_user_can_be_created.feature:17"
           }
         ]
       }

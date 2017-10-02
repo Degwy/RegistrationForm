@@ -2,8 +2,140 @@ Feature: A new user can be created
 
   Background:                                [90m# new_user_can_be_created.feature:3[0m
     [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
-    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.delete_all_users(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
 
   Scenario: I would​ like​ to​ create new valid user account. [90m# new_user_can_be_created.feature:7[0m
-    [32mWhen [0m[32mI create an account using the following details:[0m     [90m# Steps.filter_search_results(DataTable)[0m
-    [33mThen [0m[33mI should see the user 'CucumberUser' is exist[0m
+    [32mGiven [0m[32mI create an account using the following details:[0m    [90m# Steps.create_new_account(DataTable)[0m
+    [32mWhen [0m[32mI click on submit button[0m                             [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the user '[0m[32m[1mCucumberUser[0m[32m' is exist[0m        [90m# Steps.check_created_account(String)[0m
+
+  Scenario Outline:                                                       [90m# new_user_can_be_created.feature:14[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [36mGiven [0m[36mI want to enter name as '<Name>'[0m
+    [36mAnd [0m[36mI want to enter email as '<Email>'[0m
+    [36mAnd [0m[36mI want to enter password as '<Password>'[0m
+    [36mAnd [0m[36mI want to enter confirmation password as '<ConfirmationPassword>'[0m
+    [36mWhen [0m[36mI click on submit button[0m
+    [36mThen [0m[36mI should see the message '<ErrorMessage>'[0m
+
+    Examples: 
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                                   [90m# new_user_can_be_created.feature:24[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m                      [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail@gmail.com[0m[32m'[0m        [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123[0m[32m'[0m                             [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m123[0m[32m'[0m                [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                                     [90m# Steps.click_submit()[0m
+    [31mThen [0m[31mI should see the message '[0m[31m[1mPassword must be at least 6 chars[0m[31m'[0m [90m# Steps.expected_error_message(String)[0m
+      [31mjava.lang.AssertionError
+      	at org.junit.Assert.fail(Assert.java:86)
+      	at org.junit.Assert.assertTrue(Assert.java:41)
+      	at org.junit.Assert.assertTrue(Assert.java:52)
+      	at step_definition.Steps.expected_error_message(Steps.java:138)
+      	at ✽.Then I should see the message 'Password must be at least 6 chars'(new_user_can_be_created.feature:21)
+      [0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                            [90m# new_user_can_be_created.feature:25[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1m[0m[32m'[0m                           [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail@gmail.com[0m[32m'[0m [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123456[0m[32m'[0m                   [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m123456[0m[32m'[0m      [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                              [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mRequired[0m[32m'[0m                   [90m# Steps.expected_error_message(String)[0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                       [90m# new_user_can_be_created.feature:26[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m          [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1m[0m[32m'[0m                       [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123456[0m[32m'[0m              [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m123456[0m[32m'[0m [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                         [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mRequired[0m[32m'[0m              [90m# Steps.expected_error_message(String)[0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                            [90m# new_user_can_be_created.feature:27[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m               [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail@gmail.com[0m[32m'[0m [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m[0m[32m'[0m                         [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m123456[0m[32m'[0m      [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                              [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mRequired[0m[32m'[0m                   [90m# Steps.expected_error_message(String)[0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                            [90m# new_user_can_be_created.feature:28[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m               [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail@gmail.com[0m[32m'[0m [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123456[0m[32m'[0m                   [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m[0m[32m'[0m            [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                              [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mpasswords are not the same[0m[32m'[0m [90m# Steps.expected_error_message(String)[0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                            [90m# new_user_can_be_created.feature:29[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m               [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail@gmail.com[0m[32m'[0m [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123456[0m[32m'[0m                   [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m654321[0m[32m'[0m      [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                              [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mpasswords are not the same[0m[32m'[0m [90m# Steps.expected_error_message(String)[0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                        [90m# new_user_can_be_created.feature:30[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m           [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail@gmail[0m[32m'[0m [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123456[0m[32m'[0m               [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m123456[0m[32m'[0m  [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                          [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mInvalid email address[0m[32m'[0m  [90m# Steps.expected_error_message(String)[0m
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.display_or_delete_all_users(String)[0m
+
+  Scenario Outline:                                       [90m# new_user_can_be_created.feature:31[0m
+    I want to make sure that user with invalid/incomplete data will not be created:
+
+    [32mGiven [0m[32mI want to enter name as '[0m[32m[1mCucumberUser[0m[32m'[0m          [90m# Steps.enter_name(String)[0m
+    [32mAnd [0m[32mI want to enter email as '[0m[32m[1mcucumberuseremail[0m[32m'[0m      [90m# Steps.enter_email(String)[0m
+    [32mAnd [0m[32mI want to enter password as '[0m[32m[1m123456[0m[32m'[0m              [90m# Steps.enter_password(String)[0m
+    [32mAnd [0m[32mI want to enter confirmation password as '[0m[32m[1m123456[0m[32m'[0m [90m# Steps.enter_confirmation_password(String)[0m
+    [32mWhen [0m[32mI click on submit button[0m                         [90m# Steps.click_submit()[0m
+    [32mThen [0m[32mI should see the message '[0m[32m[1mInvalid email address[0m[32m'[0m [90m# Steps.expected_error_message(String)[0m

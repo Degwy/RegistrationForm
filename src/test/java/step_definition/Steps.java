@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import cucumber.api.DataTable;
 import cucumber.api.java.After;
@@ -34,7 +34,7 @@ public static String BaseUrl = "http://85.93.17.135:9000/";
 	@After
 	public void tearDown()
 	{
-		delete_all_users("delete");
+		display_or_delete_all_users("delete");
 		driver.quit();
 	}
 	
@@ -45,21 +45,17 @@ public static String BaseUrl = "http://85.93.17.135:9000/";
 	}
 	
 	@And("^(?:|I) want to '(.*?)' all users$")
-	public void delete_all_users(String method)
+	public void display_or_delete_all_users(String method)
 	{
 		RestAssured.baseURI = BaseUrl;
 		RequestSpecification httpRequest = RestAssured.given();
 		if (method.toLowerCase().trim().equals("delete"))
 		{
-			Response response = httpRequest.request(Method.DELETE, "/user/all");
-			String responseBody = response.getBody().asString();
-			System.out.println("Response Body is =>  " + responseBody);
+			httpRequest.request(Method.DELETE, "/user/all");
 		}
 		else if (method.toLowerCase().trim().equals("get"))
 		{
-			Response response = httpRequest.request(Method.GET, "/user/all/json");
-			String responseBody = response.getBody().asString();
-			System.out.println("Response Body is =>  " + responseBody);
+			httpRequest.request(Method.GET, "/user/all/json");
 		}
 	}
 	
@@ -96,14 +92,13 @@ public static String BaseUrl = "http://85.93.17.135:9000/";
 	@Then("^(?:|I) should see the user '(.*?)' is exist$")
 	public void check_created_account(String userName)
 	{
-		if (driver.findElement(By.xpath("//td[text()='"+userName+"']")).isDisplayed())
+		try
 		{
-			Assert.assertTrue(true);
+			Assert.assertTrue(driver.findElement(By.xpath("//td[text()='"+userName+"']")).isDisplayed());
 		}
-		else
+		catch (NoSuchElementException ex)
 		{
 			Assert.assertTrue(false);
-
 		}
 	}
 	
@@ -134,15 +129,15 @@ public static String BaseUrl = "http://85.93.17.135:9000/";
 	@Then("^(?:|I) should see the message '([^\"]*)'$")
 	public void expected_error_message(String msg)
 	{
-		if (driver.findElement(By.xpath("//p[text()='"+msg+"']")).isDisplayed())
+		try
 		{
-			Assert.assertTrue(true);
+			Assert.assertTrue(driver.findElement(By.xpath("//p[text()='"+msg+"']")).isDisplayed());
 		}
-		else
+		catch (NoSuchElementException ex)
 		{
 			Assert.assertTrue(false);
-
 		}
+		
 	}
 	
 	

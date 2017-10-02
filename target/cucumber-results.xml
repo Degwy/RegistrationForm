@@ -1,9 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="5.496013">
-<testcase classname="A new user can be created" name="I would​ like​ to​ create new valid user account." time="5.496013">
-<skipped><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="9" time="174.984955">
+<testcase classname="A new user can be created" name="I would​ like​ to​ create new valid user account." time="25.881387">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
 And I want to 'delete' all users............................................passed
-When I create an account using the following details:.......................passed
-Then I should see the user 'CucumberUser' is exist..........................undefined
-]]></skipped>
+Given I create an account using the following details:......................passed
+When I click on submit button...............................................passed
+Then I should see the user 'CucumberUser' is exist..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_2" time="38.785839">
+<failure message="java.lang.AssertionError&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:52)&#10;&#9;at step_definition.Steps.expected_error_message(Steps.java:138)&#10;&#9;at ✽.Then I should see the message 'Password must be at least 6 chars'(new_user_can_be_created.feature:21)&#10;"><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as 'cucumberuseremail@gmail.com'..................passed
+And I want to enter password as '123'.......................................passed
+And I want to enter confirmation password as '123'..........................passed
+When I click on submit button...............................................passed
+Then I should see the message 'Password must be at least 6 chars'...........failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at step_definition.Steps.expected_error_message(Steps.java:138)
+	at ✽.Then I should see the message 'Password must be at least 6 chars'(new_user_can_be_created.feature:21)
+]]></failure>
+</testcase>
+<testcase classname="A new user can be created" name="_3" time="8.287595">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as ''............................................passed
+And I want to enter email as 'cucumberuseremail@gmail.com'..................passed
+And I want to enter password as '123456'....................................passed
+And I want to enter confirmation password as '123456'.......................passed
+When I click on submit button...............................................passed
+Then I should see the message 'Required'....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_4" time="12.822489">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as ''.............................................passed
+And I want to enter password as '123456'....................................passed
+And I want to enter confirmation password as '123456'.......................passed
+When I click on submit button...............................................passed
+Then I should see the message 'Required'....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_5" time="15.400019">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as 'cucumberuseremail@gmail.com'..................passed
+And I want to enter password as ''..........................................passed
+And I want to enter confirmation password as '123456'.......................passed
+When I click on submit button...............................................passed
+Then I should see the message 'Required'....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_6" time="9.320132">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as 'cucumberuseremail@gmail.com'..................passed
+And I want to enter password as '123456'....................................passed
+And I want to enter confirmation password as ''.............................passed
+When I click on submit button...............................................passed
+Then I should see the message 'passwords are not the same'..................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_7" time="14.964656">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as 'cucumberuseremail@gmail.com'..................passed
+And I want to enter password as '123456'....................................passed
+And I want to enter confirmation password as '654321'.......................passed
+When I click on submit button...............................................passed
+Then I should see the message 'passwords are not the same'..................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_8" time="20.712418">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as 'cucumberuseremail@gmail'......................passed
+And I want to enter password as '123456'....................................passed
+And I want to enter confirmation password as '123456'.......................passed
+When I click on submit button...............................................passed
+Then I should see the message 'Invalid email address'.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="A new user can be created" name="_9" time="28.81042">
+<system-out><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+Given I want to enter name as 'CucumberUser'................................passed
+And I want to enter email as 'cucumberuseremail'............................passed
+And I want to enter password as '123456'....................................passed
+And I want to enter confirmation password as '123456'.......................passed
+When I click on submit button...............................................passed
+Then I should see the message 'Invalid email address'.......................passed
+]]></system-out>
 </testcase>
 </testsuite>
