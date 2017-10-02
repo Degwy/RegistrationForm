@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="5.496013">
+<testcase classname="A new user can be created" name="I would​ like​ to​ create new valid user account." time="5.496013">
+<skipped><![CDATA[Given I open 'http://85.93.17.135:9000/'....................................passed
+And I want to 'delete' all users............................................passed
+When I create an account using the following details:.......................passed
+Then I should see the user 'CucumberUser' is exist..........................undefined
+]]></skipped>
+</testcase>
+</testsuite>

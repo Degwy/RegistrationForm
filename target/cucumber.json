@@ -1,0 +1,121 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1372237859,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I open \u0027http://85.93.17.135:9000/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://85.93.17.135:9000/",
+                  "offset": 8
+                }
+              ],
+              "location": "Steps.open_url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 686178335,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I want to \u0027delete\u0027 all users",
+            "match": {
+              "arguments": [
+                {
+                  "val": "delete",
+                  "offset": 11
+                }
+              ],
+              "location": "Steps.delete_all_users(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2024319569,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "I would​ like​ to​ create new valid user account.",
+        "description": "",
+        "id": "a-new-user-can-be-created;i-would​-like​-to​-create-new-valid-user-account.",
+        "after": [
+          {
+            "result": {
+              "duration": 28217,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Steps.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1413249036,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I create an account using the following details:",
+            "match": {
+              "location": "Steps.filter_search_results(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name:CucumberUser",
+                  "Email:cucumberuseremail@gmail.com",
+                  "Password:123456",
+                  "Confirmation password:123456"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 10,
+            "name": "I should see the user \u0027CucumberUser\u0027 is exist",
+            "match": {},
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "A new user can be created",
+    "description": "",
+    "id": "a-new-user-can-be-created",
+    "keyword": "Feature",
+    "uri": "new_user_can_be_created.feature"
+  }
+]

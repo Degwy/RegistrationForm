@@ -1,0 +1,9 @@
+Feature: A new user can be created
+
+  Background:                                [90m# new_user_can_be_created.feature:3[0m
+    [32mGiven [0m[32mI open '[0m[32m[1mhttp://85.93.17.135:9000/[0m[32m'[0m [90m# Steps.open_url(String)[0m
+    [32mAnd [0m[32mI want to '[0m[32m[1mdelete[0m[32m' all users[0m         [90m# Steps.delete_all_users(String)[0m
+
+  Scenario: I would​ like​ to​ create new valid user account. [90m# new_user_can_be_created.feature:7[0m
+    [32mWhen [0m[32mI create an account using the following details:[0m     [90m# Steps.filter_search_results(DataTable)[0m
+    [33mThen [0m[33mI should see the user 'CucumberUser' is exist[0m

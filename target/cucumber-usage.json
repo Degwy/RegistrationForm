@@ -1,0 +1,56 @@
+[
+  {
+    "source": "^(?:|I) create an account using the following details:",
+    "steps": [
+      {
+        "name": "I create an account using the following details:",
+        "aggregatedDurations": {
+          "average": 1.413249036,
+          "median": 1.413249036
+        },
+        "durations": [
+          {
+            "duration": 1.413249036,
+            "location": "new_user_can_be_created.feature:8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) want to \u0027(.*?)\u0027 all users$",
+    "steps": [
+      {
+        "name": "I want to \u0027delete\u0027 all users",
+        "aggregatedDurations": {
+          "average": 0.686178335,
+          "median": 0.686178335
+        },
+        "durations": [
+          {
+            "duration": 0.686178335,
+            "location": "new_user_can_be_created.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^(?:|I) open \u0027(.*?)\u0027$",
+    "steps": [
+      {
+        "name": "I open \u0027http://85.93.17.135:9000/\u0027",
+        "aggregatedDurations": {
+          "average": 1.372237859,
+          "median": 1.372237859
+        },
+        "durations": [
+          {
+            "duration": 1.372237859,
+            "location": "new_user_can_be_created.feature:4"
+          }
+        ]
+      }
+    ]
+  }
+]
